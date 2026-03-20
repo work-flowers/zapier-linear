@@ -6,12 +6,12 @@ const appTester = zapier.createAppTester(App);
 // read the `.env` file into the environment, if available
 zapier.tools.env.inject();
 
-describe('creates.issue_label', () => {
+describe('searches.list_issue_comments', () => {
   it('should run', async () => {
     const bundle = { inputData: {} };
 
     const results = await appTester(
-      App.creates['issue_label'].operation.perform,
+      App.searches['list_issue_comments'].operation.perform,
       bundle,
     );
     expect(results).toBeDefined();

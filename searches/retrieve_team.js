@@ -11,6 +11,7 @@ const perform = async (z, bundle) => {
       query: `
       query GetIssueTeamAndState($id: String!) {
         issue(id: $id) {
+          identifier
           team {
             id
             key
@@ -67,10 +68,10 @@ module.exports = {
   },
   display: {
     description:
-      'Retrieve the team ID, team key, team name and state for a specific issue',
+      'Retrieve the identifier, team, and state for a specific issue',
     hidden: false,
-    label: 'Retrieve Team and State',
+    label: 'Retrieve Issue Details',
   },
   key: 'retrieve_team',
-  noun: 'Team',
+  noun: 'Issue',
 };
