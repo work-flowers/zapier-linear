@@ -11,6 +11,7 @@ const createEmojiCreate = require('./creates/create_emoji.js');
 const retrieveStateSearch = require('./searches/retrieve_state.js');
 const retrieveIssueDetailsSearch = require('./searches/retrieve_team.js');
 const newTeamTrigger = require('./triggers/new_team.js');
+const teamRetirementStatusChangedTrigger = require('./triggers/team_retirement_status_changed.js');
 
 module.exports = {
   version: require('./package.json').version,
@@ -22,6 +23,7 @@ module.exports = {
   },
   triggers: {
     [newTeamTrigger.key]: newTeamTrigger,
+    [teamRetirementStatusChangedTrigger.key]: teamRetirementStatusChangedTrigger,
   },
   creates: {
     [createChildLabelCreate.key]: createChildLabelCreate,
