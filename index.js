@@ -10,6 +10,7 @@ const createChildCommentCreate = require('./creates/create_child_comment.js');
 const createEmojiCreate = require('./creates/create_emoji.js');
 const retrieveStateSearch = require('./searches/retrieve_state.js');
 const retrieveIssueDetailsSearch = require('./searches/retrieve_team.js');
+const newTeamTrigger = require('./triggers/new_team.js');
 
 module.exports = {
   version: require('./package.json').version,
@@ -18,6 +19,9 @@ module.exports = {
   requestTemplate: {
     params: { api_key: '{{bundle.authData.api_key}}' },
     headers: { 'X-API-KEY': '{{bundle.authData.api_key}}' },
+  },
+  triggers: {
+    [newTeamTrigger.key]: newTeamTrigger,
   },
   creates: {
     [createChildLabelCreate.key]: createChildLabelCreate,

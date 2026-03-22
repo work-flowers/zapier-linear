@@ -1,6 +1,6 @@
 {
   "name": "linear-unofficial-integration-by-work-flowers",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "For API methods not supported in the official Linear Zapier app",
   "main": "index.js",
   "scripts": {
