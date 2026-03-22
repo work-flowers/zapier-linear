@@ -1,7 +1,6 @@
 const authentication = require('./authentication');
 const createChildLabelCreate = require('./creates/create_child_label.js');
 const listIssueCommentsSearch = require('./searches/list_issue_comments.js');
-const issueLabelSearch = require('./searches/issue_label.js');
 const setProjectTargetCreate = require('./creates/set_project_target.js');
 const createProjectAttachmentCreate = require('./creates/create_project_attachment.js');
 const updateIssueAttachmentTitleCreate = require('./creates/update_issue_attachment_title.js');
@@ -9,7 +8,7 @@ const createTeamCreate = require('./creates/create_team.js');
 const createChildCommentCreate = require('./creates/create_child_comment.js');
 const createEmojiCreate = require('./creates/create_emoji.js');
 const retrieveStateSearch = require('./searches/retrieve_state.js');
-const retrieveIssueDetailsSearch = require('./searches/retrieve_team.js');
+const retrieveIssueDetailsSearch = require('./searches/retrieve_issue_details.js');
 const newTeamTrigger = require('./triggers/new_team.js');
 const teamRetirementStatusChangedTrigger = require('./triggers/team_retirement_status_changed.js');
 
@@ -38,6 +37,5 @@ module.exports = {
     [retrieveStateSearch.key]: retrieveStateSearch,
     [retrieveIssueDetailsSearch.key]: retrieveIssueDetailsSearch,
     [listIssueCommentsSearch.key]: listIssueCommentsSearch,
-    [issueLabelSearch.key]: issueLabelSearch,
   },
 };
