@@ -15,6 +15,9 @@ const perform = async (z, bundle) => {
           name
           type
         }
+        project {
+          id
+        }
         ${
           hasParentLabel
             ? `labels(filter: {parent: {id: {eq: $parentLabelId}}}) {
@@ -66,6 +69,7 @@ const perform = async (z, bundle) => {
       identifier: issue.identifier,
       team: issue.team,
       state: issue.state,
+      project_id: issue.project?.id || null,
     };
 
     if (hasParentLabel) {
