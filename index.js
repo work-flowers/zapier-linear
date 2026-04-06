@@ -7,6 +7,7 @@ const updateIssueAttachmentTitleCreate = require('./creates/update_issue_attachm
 const createTeamCreate = require('./creates/create_team.js');
 const createChildCommentCreate = require('./creates/create_child_comment.js');
 const createEmojiCreate = require('./creates/create_emoji.js');
+const suspendUserCreate = require('./creates/suspend_user.js');
 const retrieveStateSearch = require('./searches/retrieve_state.js');
 const retrieveIssueDetailsSearch = require('./searches/retrieve_issue_details.js');
 const newTeamTrigger = require('./triggers/new_team.js');
@@ -32,6 +33,7 @@ module.exports = {
     [createTeamCreate.key]: createTeamCreate,
     [createChildCommentCreate.key]: createChildCommentCreate,
     [createEmojiCreate.key]: createEmojiCreate,
+    [suspendUserCreate.key]: suspendUserCreate,
   },
   searches: {
     [retrieveStateSearch.key]: retrieveStateSearch,
